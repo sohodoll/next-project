@@ -1,3 +1,5 @@
+import Navbar from '@/comps/Navbar';
+
 const Ninjas = () => {
   return (
     <div>
