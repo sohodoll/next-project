@@ -1,5 +1,6 @@
 import Navbar from '@/comps/Navbar';
 import style from '../../styles/Ninjas.module.css';
+import Link from 'next/link';
 
 export const getStaticProps = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -15,12 +16,11 @@ const Ninjas = ({ ninjas }) => {
 
       {ninjas.map((ninja) => {
         return (
-          <div className={style.single} key={ninja.id}>
-            <a className=''></a>
+          <Link href={'/ninjas/' + ninja.id} className={style.single} key={ninja.id}>
             <h3>{ninja.name}</h3>
             <p>{ninja.email}</p>
             <p>{ninja.website}</p>
-          </div>
+          </Link>
         );
       })}
     </div>
