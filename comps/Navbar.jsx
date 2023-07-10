@@ -1,10 +1,12 @@
+import Image from 'next/image';
 import Link from 'next/link';
+// import logo from '/logo.svg';
 
 const Navbar = () => {
   return (
     <nav>
       <div className='logo'>
-        <h1>Ninja List</h1>
+        <Image width={128} height={27} src='/vercel.svg' alt='logo' />
       </div>
       <Link href='/'>Home</Link>
       <Link href='/about'>About</Link>
